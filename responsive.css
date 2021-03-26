@@ -1,0 +1,58 @@
+@media screen and (max-width: 1020px) {
+
+  }
+
+@media screen and (max-width: 767px) { 
+  .container {
+    padding: 0 20px;
+    width: 100%;
+  }
+  header .container {
+    display: flex;
+
+  }
+.menu-header, .name-header, .sns-header {
+  flex: auto;
+  margin: auto 0;
+}
+
+.menu-pc {
+  display: none;
+}
+
+/* ハンバーガーメニュー */
+  .line, .content{
+    display: block;
+  }
+  .content {
+    background-color: #ccc;
+  }
+
+  .skill .far, .skill .fas {
+    font-size: 3em;
+  }
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+  h2 {
+    margin: 0;
+  }
+  .about-left {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .about-right {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .skills {
+    flex-direction: column;
+  } 
+  .skill {
+    padding: 20px;
+  }
+
+
+}
