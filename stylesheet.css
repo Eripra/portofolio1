@@ -1,0 +1,198 @@
+
+body {
+  margin: 0;
+
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 60px;
+  text-align: center;
+  color: #333;
+  box-sizing: border-box;
+  max-width: 1000px;
+}
+
+.clear {
+  clear: left;
+}
+
+h2 {
+  padding-bottom: 30px;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+.name-header {
+  text-align: center;
+  font-family: 'Helvetica', '游ゴシック', "Yu Gothic", 'YuGothic', 'HiraKakuProN-W3', 'メイリオ', 'Meiryo', 'sans-serif';
+}
+.sns-header {
+  float: right;
+}
+.fa {
+  padding: 0 8px;
+  font-size: 18px;
+}
+.fa:hover {
+  cursor: pointer;
+}
+.menu-pc a, .menu-footer a {
+  text-decoration: none;
+  font-family: 'Lato', 'sans-serif';
+  padding: 0 8px;
+  transition: all 0.2s;
+  float: left;
+  color: #333;
+}
+
+ .menu1:hover {
+  border-bottom: 1px solid #444; 
+  color: #444;
+  font-size: 15px;
+}
+/* ハンバーガーメニュー */
+#menu, .line, .content {
+  display: none;
+}
+
+.line {
+  width: 20px;
+  height: 3px;
+  background-color: #333;
+  margin: 3px 0 3px auto;
+
+  
+}
+
+.content {
+  width: 150px;
+  height: 100%;
+  background-color: #fff;
+  transform: translateX(400px);
+  transition: .3s ease-in-out;
+}
+#menu:checked ~ .content {
+  transform: translateX(0);
+}
+
+.site-image {
+  height: 420px;
+  background-image: url(img/IMG_9182.JPG);
+  background-size: cover;
+  opacity: 0.9;
+}
+
+
+.about-wrapper {
+  margin: 50px 0;
+}
+.about {
+  display: flex;
+}
+
+.about-left {
+  width: 30%;
+  padding-right: 20px;
+}
+.about-left img {
+  max-width: 100%;
+  border-radius: 50%;
+  opacity: 0.8;
+  
+}
+.about-right {
+  width: 70%;
+  margin: auto 20px;
+  text-align: left; 
+}
+
+.skill .far, .fas {
+  font-size: 5em;
+  color: #333;
+}
+.skills {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.skill {
+  flex: auto;
+  padding: 0 10px;
+}
+
+
+footer {
+  border-top: solid 1px #999;
+  font-family: 'Helvetica', '游ゴシック', "Yu Gothic", 'YuGothic', 'HiraKakuProN-W3', 'メイリオ', 'Meiryo', 'sans-serif';
+  padding: 10px 0;
+  
+}
+.footer-left {
+  float: left;
+  text-align: left;
+}
+.footer-left a {
+  font-size: 13px;
+}
+.footer-left h3 {
+  font-size: 15px;
+  padding-left: 8px;
+ 
+}
+.menu-footer  {
+  padding-bottom: 10px;
+  display: block;
+}
+footer .container {
+  position: relative;
+}
+.footer-right {
+  right: 25px;
+  bottom: 0;
+  position: absolute;
+}
+
+.footer-right p {
+  margin: 0;
+  font-size: 12px;
+}
+
+/* コンタクトページ */
+.contact-page .container {
+  border-top: solid 1px #333;
+}
+.contact-page h2 {
+  font-weight: 100;
+  font-family: 'Lato', 'sans-serif';
+  font-size: 30px;
+  padding: 40px 0;
+}
+.contact-form {
+  display: flex;
+  margin-bottom: 40px;
+
+}
+.contact-item {
+  padding: 0 20px;
+  width: 50%;
+}
+.item-left {
+  display: flex;
+  flex-direction: column;
+}
+.item-left .input {
+  margin-bottom: 20px;
+}
+.item-left .btn {
+ margin-top: auto;
+}
+.item-left .btn input {
+  padding: 0 20px;
+  letter-spacing: 5px;
+}
