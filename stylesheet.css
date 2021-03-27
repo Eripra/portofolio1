@@ -1,6 +1,10 @@
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
+  overflow-x: hidden;
 
 }
 
@@ -11,7 +15,7 @@ body {
   text-align: center;
   color: #333;
   box-sizing: border-box;
-  max-width: 1000px;
+  max-width: 1200px;
 }
 
 .clear {
@@ -19,7 +23,11 @@ body {
 }
 
 h2 {
-  padding-bottom: 30px;
+  margin-bottom: 70px;
+  margin-top:100px;
+  font-weight: 100;
+  font-family: 'Lato', 'sans-serif';
+  font-size: 30px;
 }
 ul {
   list-style: none;
@@ -54,44 +62,74 @@ a {
  .menu1:hover {
   border-bottom: 1px solid #444; 
   color: #444;
-  font-size: 15px;
+  /* font-size: 15px; */
 }
 /* ハンバーガーメニュー */
+.menu-sumaho {
+  position: relative;
+}
 #menu, .line, .content {
   display: none;
 }
 
 .line {
-  width: 20px;
-  height: 3px;
+  width: 40px;
+  height: 6px;
   background-color: #333;
-  margin: 3px 0 3px auto;
-
-  
+  margin: 6px 0 6px auto;
 }
-
-.content {
-  width: 150px;
+.open {
+  cursor: pointer;
+}
+/*閉じる用の薄黒箇所*/
+#nav-close {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
-  background-color: #fff;
-  transform: translateX(400px);
+  opacity: 0;
   transition: .3s ease-in-out;
 }
-#menu:checked ~ .content {
-  transform: translateX(0);
+/* スマホメニューの中身 */
+.content {
+  overflow: auto;
+  position: fixed;
+  z-index: 9999;
+  max-width: 150px;
+  width: 100%;
+  height: 140px;
+  transform: translateX(135%);
+  transition: .3s ease-in-out;
+}
+.content .navi {
+  text-align: left;
+}
+.content li {
+  padding-bottom: 20px;
 }
 
+#menu:checked ~ #nav-close {
+  display: block;
+  opacity: .5;
+}
+#menu:checked ~ .content {
+  transform: translateX(0%);
+}
+
+
 .site-image {
+  margin-top: 2px;
   height: 420px;
-  background-image: url(https://github.com/Eripra/portofolio1/blob/main/IMG_9182.JPG?raw=true);
+  background-image: url(img/IMG_9182.JPG);
   background-size: cover;
   opacity: 0.9;
 }
 
 
-.about-wrapper {
-  margin: 50px 0;
-}
+
 .about {
   display: flex;
 }
@@ -127,10 +165,58 @@ a {
 }
 
 
+/* コンタクトページ */
+
+.contact-form {
+  display: flex;
+  margin-bottom: 40px;
+  
+}
+.contact-item {
+  padding: 0 20px;
+  width: 50%;
+}
+.item-left {
+  display: flex;
+  flex-direction: column;
+}
+.item-left .input {
+  margin-bottom: 20px;
+}
+.item-left input {
+  height: 30px;
+  width: 300px;
+}
+.item-left .btn {
+  margin-top: auto;
+}
+.item-left .btn input {
+  letter-spacing: 10px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+}
+.to-top {
+  margin-top: 10em;
+}
+
+.to-top .line {
+  margin: 0 auto;
+  width: 35px;
+  height: 4px;
+  background-color: #aaa;
+}
+.fa-arrow-up {
+  font-size: 2em;
+  color: #aaa;
+}
+
+/* フッター */
 footer {
   border-top: solid 1px #999;
   font-family: 'Helvetica', '游ゴシック', "Yu Gothic", 'YuGothic', 'HiraKakuProN-W3', 'メイリオ', 'Meiryo', 'sans-serif';
   padding: 10px 0;
+  margin-top: 10px;
   
 }
 .footer-left {
@@ -161,38 +247,4 @@ footer .container {
 .footer-right p {
   margin: 0;
   font-size: 12px;
-}
-
-/* コンタクトページ */
-.contact-page .container {
-  border-top: solid 1px #333;
-}
-.contact-page h2 {
-  font-weight: 100;
-  font-family: 'Lato', 'sans-serif';
-  font-size: 30px;
-  padding: 40px 0;
-}
-.contact-form {
-  display: flex;
-  margin-bottom: 40px;
-
-}
-.contact-item {
-  padding: 0 20px;
-  width: 50%;
-}
-.item-left {
-  display: flex;
-  flex-direction: column;
-}
-.item-left .input {
-  margin-bottom: 20px;
-}
-.item-left .btn {
- margin-top: auto;
-}
-.item-left .btn input {
-  padding: 0 20px;
-  letter-spacing: 5px;
 }
